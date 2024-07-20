@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+	text-align: center
+}
+
+h3 {
+	text-align: center;
+}
+
+table {
+	border: 1px solid black;
+}
+
+nav {
+	width: 100%
+}
+
+ul.nav {
+	list-style: none;
+	height: 36px;
+	line-height: 36px;
+	background: green;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+ul.nav li {
+	border: 2px solid white;
+	float: left;
+}
+
+ul.nav a {
+	display: block;
+	padding: 0 25px;
+	color: white;
+	text-decoration: none;
+}
+
+ul.nav a:hover, ul.nav li.current a {
+	color: green;
+	background: white;
+}
+</style>
+<script>
+	function validate() {
+		var anum = document.withdraw.anum.value;
+		var amt = document.withdraw.amt.value;
+		if (anum == null || anum == "") {
+
+			alert("Account Number Cannot be Empty");
+			return false;
+		}
+		if (amt == null || amt == "") {
+			alert("Amount field cannot be empty");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<ul class="nav">
+		<li><a href="createaccount.html">Create Account</a></li>
+		<li><a href="withdraw.html">Withdraw Amount</a></li>
+		<li><a href="deposit.html">Deposit Amount</a></li>
+		<li><a href="getrecord.html">Get Details</a></li>
+		<li><a href="updaterecord.html">Update Details</a></li>
+		<li><a href="deleterecord.html">Delete Account</a></li>
+		<li><a href="transfer.html">Transfer Amount</a></li>
+		<li><a href="CreditCard">Credit Card</a></li>
+		<li><a href="Logout">Logout</a></li>
+	</ul>
+	<form name="withdraw" action="Withdraw" method="post"
+		onsubmit="return validate()">
+		<table align='center'>
+			<tr>
+				<td>Enter Account Number :</td>
+				<td><input type="text" name="anum" /></td>
+			</tr>
+			<tr>
+				<td>Enter Withdraw Amount :</td>
+				<td><input type="text" name="amt" /></td>
+			</tr>
+			<tr>
+				<td colspan='2' align='center'><input type="submit"
+					value="Withdraw" /></td>
+
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<style>
+h1 {
+	text-align: center
+}
+
+h3 {
+	text-align: center;
+}
+
+table {
+	border: 1px solid black;
+}
+
+nav {
+	width: 100%
+}
+
+ul.nav {
+	list-style: none;
+	height: 36px;
+	line-height: 36px;
+	background: green;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+}
+
+ul.nav li {
+	border: 2px solid white;
+	float: left;
+}
+
+ul.nav a {
+	display: block;
+	padding: 0 25px;
+	color: white;
+	text-decoration: none;
+}
+
+ul.nav a:hover, ul.nav li.current a {
+	color: green;
+	background: white;
+}
+
+.sub {
+	background-color: Red;
+	font-size: 10px;
+	font-weight: Bold;
+}
+
+.table {
+	padding: 50px;
+	border: 1px solid black;
+	color: black;
+	float: left;
+}
+
+.head {
+	background-color: green;
+	font-weight: bold;
+	font: centre;
+}
+</style>
+<script>
+	function validate() {
+		var amount = document.transfer.amount.value;
+		var acc1 = document.transfer.acc1.value;
+		var acc2 = document.transfer.acc2.value;
+		if (amount == null || amount == "") {
+			alert("Enter Amount");
+			return false;
+		} else if (acc1 == null || acc1 == "") {
+			alert("Enter Account Number");
+			return false;
+		} else if (acc2 == null || acc2 == "") {
+			alert("Enter receiver A/c no");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<ul class="nav">
+		<li><a href="createaccount.html">Create Account</a></li>
+		<li><a href="withdraw.html">Withdraw Amount</a></li>
+		<li><a href="deposit.html">Deposit Amount</a></li>
+		<li><a href="getrecord.html">Get Details</a></li>
+		<li><a href="updaterecord.html">Update Details</a></li>
+		<li><a href="deleterecord.html">Delete Account</a></li>
+		<li><a href="transfer.html">Transfer Amount</a></li>
+		<li><a href="CreditCard">Credit Card</a></li>
+		<li><a href="Logout">Logout</a></li>
+	</ul>
+	<caption>
+		<h2 class="head">Transfer Amount</h2>
+	</caption>
+	<form name="transfer" action="Transfer" method="get"
+		onsubmit="return validate()">
+		<div class="table">
+			<table align="7">
+				<tr>
+					<td>Amount:</td>
+					<td><input type="text" name="amount"></td>
+				</tr>
+				<tr>
+					<td>From:</td>
+					<td><input type="text" name="acc1"></td>
+				</tr>
+				<tr>
+					<td>To:</td>
+					<td><input type="text" name="acc2"></td>
+				</tr>
+				<tr>
+					<td colspan='2' align="center"><input type="submit"
+						value="transfer" class="sub"></td>
+				<tr>
+			</table>
+		</div>
+
+	</form>
+</body>

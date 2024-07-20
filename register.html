@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+	text-align: center
+}
+
+h3 {
+	text-align: center;
+}
+
+table {
+	border: 1px solid black;
+}
+
+ul.nav {
+	list-style: none;
+	height: 36px;
+	line-height: 36px;
+	background: green;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+ul.nav li {
+	border: 1px solid white;
+	float: left;
+}
+
+ul.nav a {
+	display: block;
+	padding: 0 100px;
+	color: white;
+	text-decoration: none;
+}
+
+ul.nav a:hover, ul.nav li.current a {
+	color: green;
+	background: white;
+}
+</style>
+<script>
+	function validate() {
+		var uname = document.register.uname.value;
+		var pwd = document.register.pwd.value;
+		var cnfm = document.register.cnfm.value;
+		if (uname == null || uname == "") {
+			alert("User name Cannot be Empty");
+			return false;
+		} else if (pwd == null || pwd == "") {
+			alert("Password Cannot be Empty");
+			return false;
+		} else if (cnfm == null || cnfm == "") {
+			alert("Confirm Password cannot be Empty");
+			return false;
+		} else if (pwd != cnfm) {
+			alert("Password not Match with Confirm Password");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>Welcome to Digital Banking</h1>
+	<ul class="nav">
+		<li><a href="about.html">ABOUT US</a></li>
+		<li><a href="branches.html">OUR BRANCHES</a></li>
+		<li><a href="loanemi.html">LOAN EMI CALCULATOR</a></li>
+		<li><a href="login.html">LOGIN</a></li>
+	</ul>
+	<h3>Registration Form</h3>
+	<form name="register" action="Register" method="post"
+		onsubmit="return validate()">
+		<table align="center">
+			<tr>
+				<td>Enter user name :</td>
+				<td><input type="text" name="uname" /></td>
+			</tr>
+			<tr>
+				<td>Enter Password :</td>
+				<td><input type="password" name="pwd" /></td>
+			</tr>
+			<tr>
+				<td>Confirm Password :</td>
+				<td><input type="password" name="cnfm" /></td>
+			</tr>
+
+			<tr>
+				<td colspan='2' align='center'><input class="sub" type="submit"
+					value="Register" /></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>

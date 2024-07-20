@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Banking</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #4CAF50, #2E7D32);
+        color: #fff;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 3em;
+        text-shadow: 2px 2px #000;
+    }
+    nav {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    ul.nav {
+        list-style: none;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+    ul.nav li {
+        margin: 0 10px;
+    }
+    ul.nav a {
+        display: block;
+        padding: 0 20px;
+        color: white;
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+    }
+    ul.nav a:hover, ul.nav li.current a {
+        color: #4CAF50;
+        background: white;
+        border-radius: 5px;
+    }
+    .content {
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .content img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+    footer {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        text-align: center;
+        font-size: 0.9em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    footer a {
+        color: #4CAF50;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <h1>Welcome to Digital Banking</h1>
+    <nav>
+        <ul class="nav">
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="branches.html">OUR BRANCHES</a></li>
+            <li><a href="emlcalc.html">LOAN EMI CALCULATOR</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <img src="/BankingApp/images/bank.png" width="1000" height="550" alt="Banking Image" />
+    </div>
+    <footer>
+        <p>&copy; 2024 Digital Banking. All rights reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a> |
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>
